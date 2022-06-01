@@ -26,35 +26,35 @@ class TeamsDetails
      *
      * @ORM\Column(name="ort", type="string", length=255, nullable=true, options={"default"="NULL"})
      */
-    private $ort = 'NULL';
+    private ?string $ort = 'NULL';
 
     /**
      * @var string|null
      *
      * @ORM\Column(name="verein", type="string", length=255, nullable=true, options={"default"="NULL"})
      */
-    private $verein = 'NULL';
+    private ?string $verein = 'NULL';
 
     /**
      * @var string|null
      *
      * @ORM\Column(name="homepage", type="string", length=255, nullable=true, options={"default"="NULL"})
      */
-    private $homepage = 'NULL';
+    private ?string $homepage = 'NULL';
 
     /**
      * @var string|null
      *
      * @ORM\Column(name="ligavertreter", type="string", length=255, nullable=true, options={"default"="NULL"})
      */
-    private $ligavertreter = 'NULL';
+    private ?string $ligavertreter = 'NULL';
 
     /**
      * @var string|null
      *
      * @ORM\Column(name="teamfoto", type="string", length=255, nullable=true, options={"default"="NULL"})
      */
-    private $teamfoto = 'NULL';
+    private ?string $teamfoto = 'NULL';
 
     /**
      * @var string|null

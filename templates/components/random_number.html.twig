@@ -1,0 +1,12 @@
+<div data-poll {{ attributes }}>
+    <strong data-loading="hide">{{ this.randomNumber }}</strong>
+    <!-- show only when the component is loading -->
+    <span data-loading>Loading</span>
+
+    <button
+            data-action="live#$render"
+    >
+        Generate a new number!
+    </button>
+
+</div>
