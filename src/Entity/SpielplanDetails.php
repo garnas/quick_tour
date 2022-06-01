@@ -24,37 +24,37 @@ class SpielplanDetails
     /**
      * @var bool|null
      *
-     * @ORM\Column(name="plaetze", type="boolean", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="plaetze", type="boolean", nullable=true)
      */
-    private $plaetze = 'NULL';
+    private $plaetze;
 
     /**
      * @var bool|null
      *
-     * @ORM\Column(name="anzahl_halbzeiten", type="boolean", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="anzahl_halbzeiten", type="boolean", nullable=true)
      */
-    private $anzahlHalbzeiten = 'NULL';
+    private $anzahlHalbzeiten;
 
     /**
      * @var bool|null
      *
-     * @ORM\Column(name="halbzeit_laenge", type="boolean", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="halbzeit_laenge", type="boolean", nullable=true)
      */
-    private $halbzeitLaenge = 'NULL';
+    private $halbzeitLaenge;
 
     /**
      * @var bool|null
      *
-     * @ORM\Column(name="puffer", type="boolean", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="puffer", type="boolean", nullable=true)
      */
-    private $puffer = 'NULL';
+    private $puffer;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="pausen", type="string", length=30, nullable=true, options={"default"="NULL","comment"="nach Spiel,Minuten#next"})
+     * @ORM\Column(name="pausen", type="string", length=30, nullable=true, options={"comment"="nach Spiel,Minuten#next"})
      */
-    private $pausen = 'NULL';
+    private $pausen;
 
     /**
      * @var bool

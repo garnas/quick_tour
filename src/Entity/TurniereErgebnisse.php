@@ -24,9 +24,9 @@ class TurniereErgebnisse
     /**
      * @var int|null
      *
-     * @ORM\Column(name="ergebnis", type="integer", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="ergebnis", type="integer", nullable=true)
      */
-    private $ergebnis = NULL;
+    private $ergebnis;
 
     /**
      * @var int
@@ -34,16 +34,6 @@ class TurniereErgebnisse
      * @ORM\Column(name="platz", type="integer", nullable=false)
      */
     private $platz;
-
-    /**
-     * @var \TeamsLiga
-     *
-     * @ORM\ManyToOne(targetEntity="TeamsLiga")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="team_id", referencedColumnName="team_id")
-     * })
-     */
-    private $team;
 
     /**
      * @var \TurniereLiga
@@ -54,6 +44,16 @@ class TurniereErgebnisse
      * })
      */
     private $turnier;
+
+    /**
+     * @var \TeamsLiga
+     *
+     * @ORM\ManyToOne(targetEntity="TeamsLiga")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="team_id", referencedColumnName="team_id")
+     * })
+     */
+    private $team;
 
     public function getTurnierErgebnisId(): ?int
     {
@@ -84,18 +84,6 @@ class TurniereErgebnisse
         return $this;
     }
 
-    public function getTeam(): ?TeamsLiga
-    {
-        return $this->team;
-    }
-
-    public function setTeam(?TeamsLiga $team): self
-    {
-        $this->team = $team;
-
-        return $this;
-    }
-
     public function getTurnier(): ?TurniereLiga
     {
         return $this->turnier;
@@ -104,6 +92,18 @@ class TurniereErgebnisse
     public function setTurnier(?TurniereLiga $turnier): self
     {
         $this->turnier = $turnier;
+
+        return $this;
+    }
+
+    public function getTeam(): ?TeamsLiga
+    {
+        return $this->team;
+    }
+
+    public function setTeam(?TeamsLiga $team): self
+    {
+        $this->team = $team;
 
         return $this;
     }

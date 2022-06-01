@@ -59,16 +59,16 @@ class Mailbot
     /**
      * @var string|null
      *
-     * @ORM\Column(name="fehler", type="string", length=300, nullable=true, options={"default"="''"})
+     * @ORM\Column(name="fehler", type="string", length=300, nullable=true)
      */
-    private $fehler = '\'\'';
+    private $fehler = '';
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="zeit", type="datetime", nullable=false, options={"default"="current_timestamp()"})
+     * @ORM\Column(name="zeit", type="datetime", nullable=false, options={"default"="CURRENT_TIMESTAMP"})
      */
-    private $zeit = 'current_timestamp()';
+    private $zeit = 'CURRENT_TIMESTAMP';
 
     public function getMailId(): ?int
     {

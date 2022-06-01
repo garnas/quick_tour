@@ -15,93 +15,93 @@ class TurniereDetails
     /**
      * @var string|null
      *
-     * @ORM\Column(name="hallenname", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="hallenname", type="string", length=255, nullable=true)
      */
-    private $hallenname = 'NULL';
+    private $hallenname;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="strasse", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="strasse", type="string", length=255, nullable=true)
      */
-    private $strasse = 'NULL';
+    private $strasse;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="plz", type="string", length=6, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="plz", type="string", length=6, nullable=true)
      */
-    private $plz = 'NULL';
+    private $plz;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="ort", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="ort", type="string", length=255, nullable=true)
      */
-    private $ort = 'NULL';
+    private $ort;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="haltestellen", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="haltestellen", type="string", length=255, nullable=true)
      */
-    private $haltestellen = 'NULL';
+    private $haltestellen;
 
     /**
      * @var int|null
      *
-     * @ORM\Column(name="plaetze", type="integer", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="plaetze", type="integer", nullable=true)
      */
-    private $plaetze = NULL;
+    private $plaetze;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="format", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="format", type="string", length=255, nullable=true)
      */
-    private $format = 'NULL';
+    private $format;
 
     /**
      * @var \DateTime|null
      *
-     * @ORM\Column(name="startzeit", type="time", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="startzeit", type="time", nullable=true)
      */
-    private $startzeit = 'NULL';
+    private $startzeit;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="besprechung", type="string", length=0, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="besprechung", type="string", length=0, nullable=true)
      */
-    private $besprechung = 'NULL';
+    private $besprechung;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="hinweis", type="string", length=1700, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="hinweis", type="string", length=1700, nullable=true)
      */
-    private $hinweis = 'NULL';
+    private $hinweis;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="organisator", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="organisator", type="string", length=255, nullable=true)
      */
-    private $organisator = 'NULL';
+    private $organisator;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="handy", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="handy", type="string", length=255, nullable=true)
      */
-    private $handy = 'NULL';
+    private $handy;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="startgebuehr", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="startgebuehr", type="string", length=255, nullable=true)
      */
-    private $startgebuehr = 'NULL';
+    private $startgebuehr;
 
     /**
      * @var \TurniereLiga

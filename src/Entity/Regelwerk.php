@@ -24,16 +24,16 @@ class Regelwerk
     /**
      * @var string|null
      *
-     * @ORM\Column(name="regeltitel", type="string", length=100, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="regeltitel", type="string", length=100, nullable=true)
      */
-    private $regeltitel = 'NULL';
+    private $regeltitel;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="regeltext", type="string", length=3000, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="regeltext", type="string", length=3000, nullable=true)
      */
-    private $regeltext = 'NULL';
+    private $regeltext;
 
     public function getRegelnummer(): ?string
     {

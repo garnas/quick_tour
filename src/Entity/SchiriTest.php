@@ -24,142 +24,142 @@ class SchiriTest
     /**
      * @var string|null
      *
-     * @ORM\Column(name="kategorie", type="string", length=6, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="kategorie", type="string", length=6, nullable=true)
      */
-    private $kategorie = 'NULL';
+    private $kategorie;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="LJBF", type="string", length=4, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="LJBF", type="string", length=4, nullable=true)
      */
-    private $ljbf = 'NULL';
+    private $ljbf;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="interne_notiz", type="string", length=723, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="interne_notiz", type="string", length=723, nullable=true)
      */
-    private $interneNotiz = 'NULL';
+    private $interneNotiz;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="frage", type="string", length=520, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="frage", type="string", length=520, nullable=true)
      */
-    private $frage = 'NULL';
+    private $frage;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="antwort_1", type="string", length=305, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="antwort_1", type="string", length=305, nullable=true)
      */
-    private $antwort1 = 'NULL';
+    private $antwort1;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="antwort_2", type="string", length=260, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="antwort_2", type="string", length=260, nullable=true)
      */
-    private $antwort2 = 'NULL';
+    private $antwort2;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="antwort_3", type="string", length=217, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="antwort_3", type="string", length=217, nullable=true)
      */
-    private $antwort3 = 'NULL';
+    private $antwort3;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="antwort_4", type="string", length=347, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="antwort_4", type="string", length=347, nullable=true)
      */
-    private $antwort4 = 'NULL';
+    private $antwort4;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="antwort_5", type="string", length=135, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="antwort_5", type="string", length=135, nullable=true)
      */
-    private $antwort5 = 'NULL';
+    private $antwort5;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="antwort_6", type="string", length=104, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="antwort_6", type="string", length=104, nullable=true)
      */
-    private $antwort6 = 'NULL';
+    private $antwort6;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="richtig", type="string", length=9, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="richtig", type="string", length=9, nullable=true)
      */
-    private $richtig = 'NULL';
+    private $richtig;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="regelnr", type="string", length=14, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="regelnr", type="string", length=14, nullable=true)
      */
-    private $regelnr = 'NULL';
+    private $regelnr;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="erklaerung", type="string", length=609, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="erklaerung", type="string", length=609, nullable=true)
      */
-    private $erklaerung = 'NULL';
+    private $erklaerung;
 
     /**
      * @var int|null
      *
-     * @ORM\Column(name="punkte", type="integer", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="punkte", type="integer", nullable=true)
      */
-    private $punkte = NULL;
+    private $punkte;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="name_bild", type="string", length=14, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="name_bild", type="string", length=14, nullable=true)
      */
-    private $nameBild = 'NULL';
+    private $nameBild;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="name_video", type="string", length=14, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="name_video", type="string", length=14, nullable=true)
      */
-    private $nameVideo = 'NULL';
+    private $nameVideo;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="erklaerung_bild", type="string", length=16, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="erklaerung_bild", type="string", length=16, nullable=true)
      */
-    private $erklaerungBild = 'NULL';
+    private $erklaerungBild;
 
     /**
      * @var int|null
      *
-     * @ORM\Column(name="erklaerung_video", type="integer", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="erklaerung_video", type="integer", nullable=true)
      */
-    private $erklaerungVideo = NULL;
+    private $erklaerungVideo;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="bestaetigt", type="string", length=4, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="bestaetigt", type="string", length=4, nullable=true)
      */
-    private $bestaetigt = 'NULL';
+    private $bestaetigt;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="Column_21", type="string", length=1, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="Column_21", type="string", length=1, nullable=true)
      */
-    private $column21 = 'NULL';
+    private $column21;
 
     public function getFrageId(): ?int
     {

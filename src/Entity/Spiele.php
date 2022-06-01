@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Spiele
  *
- * @ORM\Table(name="spiele", indexes={@ORM\Index(name="team_id_b", columns={"team_id_b"}), @ORM\Index(name="schiri_team_id_a", columns={"schiri_team_id_a"}), @ORM\Index(name="schiri_team_id_b", columns={"schiri_team_id_b"}), @ORM\Index(name="team_id_a", columns={"team_id_a"}), @ORM\Index(name="IDX_39043E3DB5FFB8C1", columns={"turnier_id"})})
+ * @ORM\Table(name="spiele", indexes={@ORM\Index(name="schiri_team_id_a", columns={"schiri_team_id_a"}), @ORM\Index(name="schiri_team_id_b", columns={"schiri_team_id_b"}), @ORM\Index(name="team_id_a", columns={"team_id_a"}), @ORM\Index(name="team_id_b", columns={"team_id_b"}), @ORM\Index(name="IDX_39043E3DB5FFB8C1", columns={"turnier_id"})})
  * @ORM\Entity
  */
 class Spiele
@@ -24,30 +24,50 @@ class Spiele
     /**
      * @var bool|null
      *
-     * @ORM\Column(name="tore_a", type="boolean", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="tore_a", type="boolean", nullable=true)
      */
-    private $toreA = 'NULL';
+    private $toreA;
 
     /**
      * @var bool|null
      *
-     * @ORM\Column(name="tore_b", type="boolean", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="tore_b", type="boolean", nullable=true)
      */
-    private $toreB = 'NULL';
+    private $toreB;
 
     /**
      * @var bool|null
      *
-     * @ORM\Column(name="penalty_a", type="boolean", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="penalty_a", type="boolean", nullable=true)
      */
-    private $penaltyA = 'NULL';
+    private $penaltyA;
 
     /**
      * @var bool|null
      *
-     * @ORM\Column(name="penalty_b", type="boolean", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="penalty_b", type="boolean", nullable=true)
      */
-    private $penaltyB = 'NULL';
+    private $penaltyB;
+
+    /**
+     * @var \TeamsLiga
+     *
+     * @ORM\ManyToOne(targetEntity="TeamsLiga")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="team_id_b", referencedColumnName="team_id")
+     * })
+     */
+    private $teamIdB;
+
+    /**
+     * @var \TeamsLiga
+     *
+     * @ORM\ManyToOne(targetEntity="TeamsLiga")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="schiri_team_id_b", referencedColumnName="team_id")
+     * })
+     */
+    private $schiriTeamIdB;
 
     /**
      * @var \TeamsLiga
@@ -80,26 +100,6 @@ class Spiele
      * })
      */
     private $turnier;
-
-    /**
-     * @var \TeamsLiga
-     *
-     * @ORM\ManyToOne(targetEntity="TeamsLiga")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="team_id_b", referencedColumnName="team_id")
-     * })
-     */
-    private $teamIdB;
-
-    /**
-     * @var \TeamsLiga
-     *
-     * @ORM\ManyToOne(targetEntity="TeamsLiga")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="schiri_team_id_b", referencedColumnName="team_id")
-     * })
-     */
-    private $schiriTeamIdB;
 
     public function getSpielId(): ?int
     {
@@ -154,6 +154,30 @@ class Spiele
         return $this;
     }
 
+    public function getTeamIdB(): ?TeamsLiga
+    {
+        return $this->teamIdB;
+    }
+
+    public function setTeamIdB(?TeamsLiga $teamIdB): self
+    {
+        $this->teamIdB = $teamIdB;
+
+        return $this;
+    }
+
+    public function getSchiriTeamIdB(): ?TeamsLiga
+    {
+        return $this->schiriTeamIdB;
+    }
+
+    public function setSchiriTeamIdB(?TeamsLiga $schiriTeamIdB): self
+    {
+        $this->schiriTeamIdB = $schiriTeamIdB;
+
+        return $this;
+    }
+
     public function getTeamIdA(): ?TeamsLiga
     {
         return $this->teamIdA;
@@ -186,30 +210,6 @@ class Spiele
     public function setTurnier(?TurniereLiga $turnier): self
     {
         $this->turnier = $turnier;
-
-        return $this;
-    }
-
-    public function getTeamIdB(): ?TeamsLiga
-    {
-        return $this->teamIdB;
-    }
-
-    public function setTeamIdB(?TeamsLiga $teamIdB): self
-    {
-        $this->teamIdB = $teamIdB;
-
-        return $this;
-    }
-
-    public function getSchiriTeamIdB(): ?TeamsLiga
-    {
-        return $this->schiriTeamIdB;
-    }
-
-    public function setSchiriTeamIdB(?TeamsLiga $schiriTeamIdB): self
-    {
-        $this->schiriTeamIdB = $schiriTeamIdB;
 
         return $this;
     }

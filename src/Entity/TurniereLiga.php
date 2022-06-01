@@ -24,44 +24,37 @@ class TurniereLiga
     /**
      * @var string|null
      *
-     * @ORM\Column(name="tname", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="tname", type="string", length=255, nullable=true)
      */
-    private $tname = 'NULL';
-
-    /**
-     * @var bool|null
-     *
-     * @ORM\Column(name="mixteam_wildcard", type="boolean", nullable=true)
-     */
-    private $mixteamWildcard = '0';
+    private $tname;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="art", type="string", length=0, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="art", type="string", length=0, nullable=true)
      */
-    private $art = 'NULL';
+    private $art;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="tblock", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="tblock", type="string", length=255, nullable=true)
      */
-    private $tblock = 'NULL';
+    private $tblock;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="tblock_fixed", type="string", length=0, nullable=true, options={"default"="'Nein'"})
+     * @ORM\Column(name="tblock_fixed", type="string", length=0, nullable=true, options={"default"="Nein"})
      */
-    private $tblockFixed = '\'Nein\'';
+    private $tblockFixed = 'Nein';
 
     /**
      * @var \DateTime|null
      *
-     * @ORM\Column(name="datum", type="date", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="datum", type="date", nullable=true)
      */
-    private $datum = 'NULL';
+    private $datum;
 
     /**
      * @var int|null
@@ -73,33 +66,23 @@ class TurniereLiga
     /**
      * @var string|null
      *
-     * @ORM\Column(name="phase", type="string", length=0, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="phase", type="string", length=0, nullable=true)
      */
-    private $phase = 'NULL';
+    private $phase;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="spielplan_datei", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="spielplan_datei", type="string", length=255, nullable=true)
      */
-    private $spielplanDatei = 'NULL';
+    private $spielplanDatei;
 
     /**
      * @var int|null
      *
-     * @ORM\Column(name="saison", type="integer", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="saison", type="integer", nullable=true)
      */
-    private $saison = NULL;
-
-    /**
-     * @var \TeamsLiga
-     *
-     * @ORM\ManyToOne(targetEntity="TeamsLiga")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="ausrichter", referencedColumnName="team_id")
-     * })
-     */
-    private $ausrichter;
+    private $saison;
 
     /**
      * @var \SpielplanDetails
@@ -110,6 +93,16 @@ class TurniereLiga
      * })
      */
     private $spielplanVorlage;
+
+    /**
+     * @var \TeamsLiga
+     *
+     * @ORM\ManyToOne(targetEntity="TeamsLiga")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ausrichter", referencedColumnName="team_id")
+     * })
+     */
+    private $ausrichter;
 
     public function getTurnierId(): ?int
     {
@@ -124,18 +117,6 @@ class TurniereLiga
     public function setTname(?string $tname): self
     {
         $this->tname = $tname;
-
-        return $this;
-    }
-
-    public function isMixteamWildcard(): ?bool
-    {
-        return $this->mixteamWildcard;
-    }
-
-    public function setMixteamWildcard(?bool $mixteamWildcard): self
-    {
-        $this->mixteamWildcard = $mixteamWildcard;
 
         return $this;
     }
@@ -236,18 +217,6 @@ class TurniereLiga
         return $this;
     }
 
-    public function getAusrichter(): ?TeamsLiga
-    {
-        return $this->ausrichter;
-    }
-
-    public function setAusrichter(?TeamsLiga $ausrichter): self
-    {
-        $this->ausrichter = $ausrichter;
-
-        return $this;
-    }
-
     public function getSpielplanVorlage(): ?SpielplanDetails
     {
         return $this->spielplanVorlage;
@@ -256,6 +225,18 @@ class TurniereLiga
     public function setSpielplanVorlage(?SpielplanDetails $spielplanVorlage): self
     {
         $this->spielplanVorlage = $spielplanVorlage;
+
+        return $this;
+    }
+
+    public function getAusrichter(): ?TeamsLiga
+    {
+        return $this->ausrichter;
+    }
+
+    public function setAusrichter(?TeamsLiga $ausrichter): self
+    {
+        $this->ausrichter = $ausrichter;
 
         return $this;
     }

@@ -31,16 +31,16 @@ class TeamsKontakt
     /**
      * @var string
      *
-     * @ORM\Column(name="public", type="string", length=0, nullable=false, options={"default"="'Ja'"})
+     * @ORM\Column(name="public", type="string", length=0, nullable=false, options={"default"="Ja"})
      */
-    private $public = '\'Ja\'';
+    private $public = 'Ja';
 
     /**
      * @var string
      *
-     * @ORM\Column(name="get_info_mail", type="string", length=0, nullable=false, options={"default"="'Ja'"})
+     * @ORM\Column(name="get_info_mail", type="string", length=0, nullable=false, options={"default"="Ja"})
      */
-    private $getInfoMail = '\'Ja\'';
+    private $getInfoMail = 'Ja';
 
     /**
      * @var \TeamsLiga

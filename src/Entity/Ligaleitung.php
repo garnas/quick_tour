@@ -24,30 +24,30 @@ class Ligaleitung
     /**
      * @var string
      *
-     * @ORM\Column(name="funktion", type="string", length=255, nullable=false)
+     * @ORM\Column(name="funktion", type="string", length=0, nullable=false)
      */
     private $funktion;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="email", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="email", type="string", length=255, nullable=true)
      */
-    private $email = 'NULL';
+    private $email;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="login", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="login", type="string", length=255, nullable=true)
      */
-    private $login = 'NULL';
+    private $login;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="passwort", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="passwort", type="string", length=255, nullable=true)
      */
-    private $passwort = 'NULL';
+    private $passwort;
 
     /**
      * @var \Spieler

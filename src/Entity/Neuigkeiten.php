@@ -66,9 +66,9 @@ class Neuigkeiten
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="zeit", type="datetime", nullable=false, options={"default"="current_timestamp()"})
+     * @ORM\Column(name="zeit", type="datetime", nullable=false, options={"default"="CURRENT_TIMESTAMP"})
      */
-    private $zeit = 'current_timestamp()';
+    private $zeit = 'CURRENT_TIMESTAMP';
 
     public function getNeuigkeitenId(): ?int
     {

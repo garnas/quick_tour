@@ -24,23 +24,23 @@ class Plz
     /**
      * @var string|null
      *
-     * @ORM\Column(name="Ort", type="text", length=65535, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="Ort", type="text", length=65535, nullable=true)
      */
-    private $ort = 'NULL';
+    private $ort;
 
     /**
      * @var float|null
      *
-     * @ORM\Column(name="Lon", type="float", precision=10, scale=0, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="Lon", type="float", precision=10, scale=0, nullable=true)
      */
-    private $lon = NULL;
+    private $lon;
 
     /**
      * @var float|null
      *
-     * @ORM\Column(name="LAT", type="float", precision=10, scale=0, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="LAT", type="float", precision=10, scale=0, nullable=true)
      */
-    private $lat = NULL;
+    private $lat;
 
     public function getPlz(): ?string
     {

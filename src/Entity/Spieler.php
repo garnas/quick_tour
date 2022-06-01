@@ -52,30 +52,30 @@ class Spieler
     /**
      * @var int|null
      *
-     * @ORM\Column(name="schiri", type="integer", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="schiri", type="integer", nullable=true)
      */
-    private $schiri = NULL;
+    private $schiri;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="junior", type="string", length=0, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="junior", type="string", length=0, nullable=true)
      */
-    private $junior = 'NULL';
+    private $junior;
 
     /**
      * @var int|null
      *
-     * @ORM\Column(name="letzte_saison", type="integer", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="letzte_saison", type="integer", nullable=true)
      */
-    private $letzteSaison = NULL;
+    private $letzteSaison;
 
     /**
      * @var \DateTime|null
      *
-     * @ORM\Column(name="timestamp", type="datetime", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="timestamp", type="datetime", nullable=true)
      */
-    private $timestamp = 'NULL';
+    private $timestamp;
 
     /**
      * @var \TeamsLiga

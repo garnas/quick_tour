@@ -13,78 +13,95 @@ use Doctrine\ORM\Mapping as ORM;
 class TeamsDetails
 {
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="plz", type="string", length=255, nullable=false)
+     * @ORM\Column(name="team_details_id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $teamDetailsId;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="plz", type="string", length=255, nullable=true)
      */
     private $plz;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="ort", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="ort", type="string", length=255, nullable=true)
      */
-    private ?string $ort = 'NULL';
+    private $ort;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="verein", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="verein", type="string", length=255, nullable=true)
      */
-    private ?string $verein = 'NULL';
+    private $verein;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="homepage", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="homepage", type="string", length=255, nullable=true)
      */
-    private ?string $homepage = 'NULL';
+    private $homepage;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="ligavertreter", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="ligavertreter", type="string", length=255, nullable=true)
      */
-    private ?string $ligavertreter = 'NULL';
+    private $ligavertreter;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="teamfoto", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="teamfoto", type="string", length=255, nullable=true)
      */
-    private ?string $teamfoto = 'NULL';
+    private $teamfoto;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="trikot_farbe_1", type="string", length=9, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="trikot_farbe_1", type="string", length=9, nullable=true)
      */
-    private $trikotFarbe1 = 'NULL';
+    private $trikotFarbe1;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="trikot_farbe_2", type="string", length=9, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="trikot_farbe_2", type="string", length=9, nullable=true)
      */
-    private $trikotFarbe2 = 'NULL';
+    private $trikotFarbe2;
 
     /**
      * @var \TeamsLiga
      *
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
-     * @ORM\OneToOne(targetEntity="TeamsLiga")
+     * @ORM\ManyToOne(targetEntity="TeamsLiga")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="team_id", referencedColumnName="team_id")
      * })
      */
     private $team;
 
+    public function getTeamDetailsId(): ?int
+    {
+        return $this->teamDetailsId;
+    }
+
     public function getPlz(): ?string
     {
         return $this->plz;
+    }
+
+    public function setPlz(?string $plz): self
+    {
+        $this->plz = $plz;
+
+        return $this;
     }
 
     public function getOrt(): ?string

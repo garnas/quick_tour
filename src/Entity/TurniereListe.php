@@ -24,33 +24,23 @@ class TurniereListe
     /**
      * @var string
      *
-     * @ORM\Column(name="liste", type="string", length=0, nullable=false, options={"default"="'melde'"})
+     * @ORM\Column(name="liste", type="string", length=0, nullable=false, options={"default"="melde"})
      */
-    private $liste = '\'melde\'';
+    private $liste = 'melde';
 
     /**
      * @var int|null
      *
-     * @ORM\Column(name="position_warteliste", type="integer", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="position_warteliste", type="integer", nullable=true)
      */
-    private $positionWarteliste = NULL;
+    private $positionWarteliste;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="freilos_gesetzt", type="string", length=0, nullable=false, options={"default"="'Nein'"})
+     * @ORM\Column(name="freilos_gesetzt", type="string", length=0, nullable=false, options={"default"="Nein"})
      */
-    private $freilosGesetzt = '\'Nein\'';
-
-    /**
-     * @var \TeamsLiga
-     *
-     * @ORM\ManyToOne(targetEntity="TeamsLiga")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="team_id", referencedColumnName="team_id")
-     * })
-     */
-    private $team;
+    private $freilosGesetzt = 'Nein';
 
     /**
      * @var \TurniereLiga
@@ -61,6 +51,16 @@ class TurniereListe
      * })
      */
     private $turnier;
+
+    /**
+     * @var \TeamsLiga
+     *
+     * @ORM\ManyToOne(targetEntity="TeamsLiga")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="team_id", referencedColumnName="team_id")
+     * })
+     */
+    private $team;
 
     public function getListeId(): ?int
     {
@@ -103,18 +103,6 @@ class TurniereListe
         return $this;
     }
 
-    public function getTeam(): ?TeamsLiga
-    {
-        return $this->team;
-    }
-
-    public function setTeam(?TeamsLiga $team): self
-    {
-        $this->team = $team;
-
-        return $this;
-    }
-
     public function getTurnier(): ?TurniereLiga
     {
         return $this->turnier;
@@ -123,6 +111,18 @@ class TurniereListe
     public function setTurnier(?TurniereLiga $turnier): self
     {
         $this->turnier = $turnier;
+
+        return $this;
+    }
+
+    public function getTeam(): ?TeamsLiga
+    {
+        return $this->team;
+    }
+
+    public function setTeam(?TeamsLiga $team): self
+    {
+        $this->team = $team;
 
         return $this;
     }

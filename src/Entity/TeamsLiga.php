@@ -31,51 +31,51 @@ class TeamsLiga
     /**
      * @var string
      *
-     * @ORM\Column(name="ligateam", type="string", length=0, nullable=false, options={"default"="'Ja'"})
+     * @ORM\Column(name="ligateam", type="string", length=0, nullable=false, options={"default"="Ja"})
      */
-    private $ligateam = '\'Ja\'';
+    private $ligateam = 'Ja';
 
     /**
      * @var string
      *
-     * @ORM\Column(name="terminplaner", type="string", length=0, nullable=false, options={"default"="'Nein'"})
+     * @ORM\Column(name="terminplaner", type="string", length=0, nullable=false, options={"default"="Nein"})
      */
-    private $terminplaner = '\'Nein\'';
+    private $terminplaner = 'Nein';
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="passwort", type="string", length=255, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="passwort", type="string", length=255, nullable=true)
      */
-    private $passwort = 'NULL';
+    private $passwort;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="passwort_geaendert", type="string", length=0, nullable=false, options={"default"="'Nein'"})
+     * @ORM\Column(name="passwort_geaendert", type="string", length=0, nullable=false, options={"default"="Nein"})
      */
-    private $passwortGeaendert = '\'Nein\'';
+    private $passwortGeaendert = 'Nein';
 
     /**
      * @var int|null
      *
-     * @ORM\Column(name="freilose", type="integer", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="freilose", type="integer", nullable=true)
      */
-    private $freilose = NULL;
+    private $freilose;
 
     /**
      * @var \DateTime|null
      *
-     * @ORM\Column(name="zweites_freilos", type="date", nullable=true, options={"default"="NULL","comment"="2 Schiris 2 Freilose"})
+     * @ORM\Column(name="zweites_freilos", type="date", nullable=true, options={"comment"="2 Schiris 2 Freilose"})
      */
-    private $zweitesFreilos = 'NULL';
+    private $zweitesFreilos;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="aktiv", type="string", length=0, nullable=false, options={"default"="'Ja'"})
+     * @ORM\Column(name="aktiv", type="string", length=0, nullable=false, options={"default"="Ja"})
      */
-    private $aktiv = '\'Ja\'';
+    private $aktiv = 'Ja';
 
     public function getTeamId(): ?int
     {

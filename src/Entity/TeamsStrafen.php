@@ -31,9 +31,9 @@ class TeamsStrafen
     /**
      * @var int|null
      *
-     * @ORM\Column(name="turnier_id", type="integer", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="turnier_id", type="integer", nullable=true)
      */
-    private $turnierId = NULL;
+    private $turnierId;
 
     /**
      * @var string

@@ -24,9 +24,9 @@ class SchiriErgebnis
     /**
      * @var string|null
      *
-     * @ORM\Column(name="md5sum", type="string", length=32, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="md5sum", type="string", length=32, nullable=true)
      */
-    private $md5sum = 'NULL';
+    private $md5sum;
 
     /**
      * @var int
@@ -38,65 +38,65 @@ class SchiriErgebnis
     /**
      * @var string|null
      *
-     * @ORM\Column(name="spieler_email", type="string", length=500, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="spieler_email", type="string", length=500, nullable=true)
      */
-    private $spielerEmail = 'NULL';
+    private $spielerEmail;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="gestellte_fragen", type="string", length=500, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="gestellte_fragen", type="string", length=500, nullable=true)
      */
-    private $gestellteFragen = 'NULL';
+    private $gestellteFragen;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="gesetzte_antworten", type="string", length=500, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="gesetzte_antworten", type="string", length=500, nullable=true)
      */
-    private $gesetzteAntworten = 'NULL';
+    private $gesetzteAntworten;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="test_level", type="string", length=0, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="test_level", type="string", length=0, nullable=true)
      */
-    private $testLevel = 'NULL';
+    private $testLevel;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="bestanden", type="string", length=0, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="bestanden", type="string", length=0, nullable=true)
      */
-    private $bestanden = 'NULL';
+    private $bestanden;
 
     /**
      * @var string|null
      *
-     * @ORM\Column(name="kommentar", type="string", length=500, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="kommentar", type="string", length=500, nullable=true)
      */
-    private $kommentar = 'NULL';
+    private $kommentar;
 
     /**
      * @var \DateTime|null
      *
-     * @ORM\Column(name="t_erstellt", type="datetime", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="t_erstellt", type="datetime", nullable=true)
      */
-    private $tErstellt = 'NULL';
+    private $tErstellt;
 
     /**
      * @var \DateTime|null
      *
-     * @ORM\Column(name="t_gestartet", type="datetime", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="t_gestartet", type="datetime", nullable=true)
      */
-    private $tGestartet = 'NULL';
+    private $tGestartet;
 
     /**
      * @var \DateTime|null
      *
-     * @ORM\Column(name="t_abgegeben", type="datetime", nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="t_abgegeben", type="datetime", nullable=true)
      */
-    private $tAbgegeben = 'NULL';
+    private $tAbgegeben;
 
     /**
      * @var int
