@@ -14,10 +14,16 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
-        <h1>Middle Part</h1>
-        {% block footer %}{% endblock %}
+    <body {{ stimulus_controller('symfony/ux-swup/swup') }}>
+    <h1>Navigation!!</h1>
+        <main id="swup">
+
+            {% block body %}{% endblock %}
+            <h1>Middle Part</h1>
+            {% block footer %}{% endblock %}
+
+        </main>
+    <h1>Navigation!!</h1>
     </body>
 
 

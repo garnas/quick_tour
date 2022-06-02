@@ -18,6 +18,14 @@ class DefaultController extends AbstractController
         return new Response('Hello Ansgar!');
     }
 
+    /**
+     * @Route("/test2")
+     */
+    public function test2(Request $request): Response
+    {
+        return $this->render('default/test2.html.twig');
+    }
+
    /**
     * @Route("/test/{name}")
     */
