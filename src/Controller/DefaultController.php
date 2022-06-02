@@ -48,11 +48,9 @@ class DefaultController extends AbstractController
 //            return $this->redirect('zwei');
         }
 
-        $view = $form->createView();
-
         return $this->render('default/index.html.twig', [
             'name' => $name,
-            'form' => $view,
+            'form' => $form->createView(),
             'team' => $teamLiga,
         ]);
     }
