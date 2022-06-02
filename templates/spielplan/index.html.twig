@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SpielplanController!{% endblock %}
+
+{% block body %}
+
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
+
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+    <a href="{{ path('app_default_test', {name: "turnierId"}) }}">Homepage</a>
+
+    {# <div class="example-wrapper"> #}
+    {# <table> #}
+    {# <tr> #}
+    {# <th>Schiri</th> #}
+    {# <th></th> #}
+    {# <th>Teamname</th> #}
+    {# <th></th> #}
+    {# <th>Tore</th> #}
+    {# <th></th> #}
+    {# </tr> #}
+    {# {% for spiel in spiele %} #}
+    {# <tr> #}
+    {# <td>{{ spiel.schiriTeamIdA.teamId }}</td> #}
+    {# <td>{{ spiel.schiriTeamIdB.teamId }}</td> #}
+    {# <td>{{ spiel.teamIdA.teamname }}</td> #}
+    {# <td>{{ spiel.teamIdB.teamname }}</td> #}
+    {# <td>{{ spiel.toreA }}</td> #}
+    {# <td>{{ spiel.toreB }}</td> #}
+    {# </tr> #}
+    {# {% endfor %} #}
+
+    {# </table> #}
+    <div class="example-wrapper">
+
+        {{ component('spielplan', {style: 'color:red' , spiele}) }}
+
+    </div>
+{% endblock %}

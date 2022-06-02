@@ -25,11 +25,6 @@ class TurnierController extends AbstractController
             );
         }
 
-        dump($turnier);
-        dump($turnier->getAusrichter());
-        $team = $doctrine->getRepository(TeamsLiga::class)->findOneBy(['teamname' => 'SKV Mörfelden Joker']);
-        dump($team);
-
         $team = $doctrine->getRepository(TeamsLiga::class)->findOneBy(['teamname' => 'SKV Mörfelden Joker']);
 
         return new Response("Found: " . $team->getTeamId());

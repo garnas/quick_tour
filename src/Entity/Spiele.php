@@ -22,30 +22,30 @@ class Spiele
     private $spielId;
 
     /**
-     * @var bool|null
+     * @var int|null
      *
-     * @ORM\Column(name="tore_a", type="boolean", nullable=true)
+     * @ORM\Column(name="tore_a", type="integer", nullable=true)
      */
     private $toreA;
 
     /**
-     * @var bool|null
+     * @var int|null
      *
-     * @ORM\Column(name="tore_b", type="boolean", nullable=true)
+     * @ORM\Column(name="tore_b", type="integer", nullable=true)
      */
     private $toreB;
 
     /**
-     * @var bool|null
+     * @var int|null
      *
-     * @ORM\Column(name="penalty_a", type="boolean", nullable=true)
+     * @ORM\Column(name="penalty_a", type="integer", nullable=true)
      */
     private $penaltyA;
 
     /**
-     * @var bool|null
+     * @var int|null
      *
-     * @ORM\Column(name="penalty_b", type="boolean", nullable=true)
+     * @ORM\Column(name="penalty_b", type="integer", nullable=true)
      */
     private $penaltyB;
 
@@ -106,48 +106,48 @@ class Spiele
         return $this->spielId;
     }
 
-    public function isToreA(): ?bool
+    public function getToreA(): ?int
     {
         return $this->toreA;
     }
 
-    public function setToreA(?bool $toreA): self
+    public function setToreA(?int $toreA): self
     {
         $this->toreA = $toreA;
 
         return $this;
     }
 
-    public function isToreB(): ?bool
+    public function getToreB(): ?int
     {
         return $this->toreB;
     }
 
-    public function setToreB(?bool $toreB): self
+    public function setToreB(?int $toreB): self
     {
         $this->toreB = $toreB;
 
         return $this;
     }
 
-    public function isPenaltyA(): ?bool
+    public function getPenaltyA(): ?int
     {
         return $this->penaltyA;
     }
 
-    public function setPenaltyA(?bool $penaltyA): self
+    public function setPenaltyA(?int $penaltyA): self
     {
         $this->penaltyA = $penaltyA;
 
         return $this;
     }
 
-    public function isPenaltyB(): ?bool
+    public function getPenaltyB(): ?int
     {
         return $this->penaltyB;
     }
 
-    public function setPenaltyB(?bool $penaltyB): self
+    public function setPenaltyB(?int $penaltyB): self
     {
         $this->penaltyB = $penaltyB;
 

@@ -44,14 +44,11 @@ class DefaultController extends AbstractController
 
         $form->handleRequest($request);
 //        dump($teamLiga);
-        dump($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             // $form->getData() holds the submitted values
             // but, the original `$task` variable has also been updated
             $test = $form->getData();
-
-            dump($test);
 
 //            return $this->redirect('zwei');
         }

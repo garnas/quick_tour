@@ -1,6 +1,7 @@
 {# templates/default/index.html.twig #}
 {% extends 'base.html.twig' %}
 
+
 {% block body %}
     {% dump %}
     <h1>Hello {{ name }}</h1>
@@ -11,7 +12,7 @@
 
     {{ component('random_number', {style: 'color:red' }) }}
 
-    <a href="{{ path('app_default_test2') }}">Homepage</a>
+    <a href="{{ path('app_default_test2', {name: 'Ansgar'}) }}">Homepage</a>
 
 {% endblock %}
 

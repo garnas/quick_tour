@@ -1,0 +1,50 @@
+<div data-poll="delay(4000)|getSpiele" {{ attributes }}>
+{#<div {{ attributes }}>#}
+{#    <strong data-loading="hide">#}
+
+{#        {% for spiel in this.addTor %}#}
+{#            {{ spiel.teamIdA.teamname }}#}
+{#        {% endfor %}#}
+
+{#    </strong>#}
+
+{#    <!-- show only when the component is loading -->#}
+{#    <span data-loading>Loading</span>#}
+
+    <span data-loading>Aktualisieren...</span>
+    <span data-loading="hide">...Aktualisiert</span>
+    <table>
+        <tr>
+            <th>Schiri</th>
+            <th></th>
+            <th>Teamname</th>
+            <th></th>
+            <th>Tore</th>
+            <th></th>
+        </tr>
+        {% for spiel in this.getSpiele %}
+            <tr>
+                <td>{{ spiel.schiriTeamIdA.teamId }}</td>
+                <td>{{ spiel.schiriTeamIdB.teamId }}</td>
+                <td>{{ spiel.teamIdA.teamname }}</td>
+                <td>{{ spiel.teamIdB.teamname }}</td>
+                <td>{{ spiel.toreA }}</td>
+                <td>{{ spiel.toreB }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+    <button
+            data-action="live#action"
+            data-action-name="addTor"
+    >
+        Add Goal
+    </button>
+    <button
+            data-action="live#action"
+            data-action-name="resetTore"
+    >
+        Reset
+    </button>
+</div>

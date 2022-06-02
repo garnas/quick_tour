@@ -41,8 +41,6 @@ class TeamController extends AbstractController
             // but, the original `$task` variable has also been updated
             $test = $form->getData();
 
-            dump($test);
-
             return $this->redirect('team');
         }
 
